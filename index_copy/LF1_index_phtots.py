@@ -7,7 +7,7 @@ import requests
 from datetime import *
 from requests_aws4auth import AWS4Auth
 
-host = 'https://search-myphotos-qxrhoxw3cn6hgmyy7ilju4slae.us-east-1.es.amazonaws.com'
+host = 'https://search-myphotos-qxixu6vspmzkpzb6aos7gnfare.us-east-1.es.amazonaws.com'
 region = 'us-east-1'
 
 service = 'es'
@@ -23,20 +23,6 @@ def get_url(index, type):
 def lambda_handler(event, context):
     headers = { "Content-Type": "application/json" }
     rek = boto3.client('rekognition')
-    
-    # bucket = 'store2photos'
-    # key = 'dog1.png'
-    
-    # labels = rek.detect_labels(
-    #         Image={
-    #             'S3Object': {
-    #                 'Bucket': bucket,
-    #                 'Name': key
-    #             }
-    #         },
-    #         MaxLabels=10
-    #         )
-    # print(labels)
     
     # get the image information from S3
     for record in event['Records']:
