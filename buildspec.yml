@@ -1,0 +1,10 @@
+version: 0.2  
+phases:  
+  install:
+    commands:
+      - aws cloudformation package --template-file LF2_search_photos.yaml --s3-bucket lambda-1-deployement-pipeline-bucket --output-template-file out_LF2_search_photos.yml
+artifacts:  
+  type: zip
+  files:
+    - LF2_search_photos.yaml
+    - out_LF2_search_photos.yml
