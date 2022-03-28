@@ -63,7 +63,7 @@ def lambda_handler(event, context):
 				labels = [word.lower() for word in photo['_source']['labels']]
 				if tag in labels:
 					objectKey = photo['_source']['objectKey']
-					img_url = 'https://store2photos.s3.amazonaws.com/' + objectKey
+					img_url = 'https://store2photo.s3.amazonaws.com/' + objectKey
 					img_list.append(img_url)
 
 	# url = get_url('myphotos', 'Photo', 'cat')
