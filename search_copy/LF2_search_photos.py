@@ -9,7 +9,7 @@ import logging
 
 from requests_aws4auth import AWS4Auth
 
-host = 'https://search-myphotos-qxixu6vspmzkpzb6aos7gnfare.us-east-1.es.amazonaws.com'
+host = ''
 region = 'us-east-1'
 
 service = 'es'
